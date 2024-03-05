@@ -7,17 +7,29 @@ export type Work = {
 
 const data: Work[] = [
   {
-    id: "1",
-    title: "Work 01",
+    id: "kiminovel",
+    title: "ポプラキミノベル",
     description:
       "ここに説明が入りますここに説明が入りますここに説明が入りますここに説明が入りますここに説明が入りますここに説明が入りますここに説明が入りますここに説明が入りますここに説明が入りますここに説明が入りますここに説明が入りますここに説明が入りますここに説明が入りますここに説明が入ります",
-    imageSrc: "/01.png",
+    imageSrc: "/images/cards/kiminovel.jpg",
   },
   {
-    id: "2",
-    title: "Work 02",
+    id: "eli",
+    title: "ELI for Sales Tech",
     description: "ここに説明が入ります",
-    imageSrc: "/02.png",
+    imageSrc: "/images/cards/eli.webp",
+  },
+  {
+    id: "kurukura",
+    title: "KURU KURA",
+    description: "ここに説明が入ります",
+    imageSrc: "/images/cards/kurukura.png",
+  },
+  {
+    id: "kitan",
+    title: "キタンクラブ",
+    description: "ここに説明が入ります",
+    imageSrc: "/images/cards/kitan.png",
   },
 ];
 

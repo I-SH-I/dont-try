@@ -1,27 +1,29 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from './Card.module.scss';
 
 export default function Card({
-  id,
-  title,
-  imageSrc,
+    id,
+    title,
+    imageSrc,
+    style,
 }: {
-  id: string;
-  title: string;
-  imageSrc: string;
+    id: string;
+    title: string;
+    imageSrc: string;
+    style?: React.CSSProperties;
 }) {
-  return (
-    <Link href={`/works/${id}`}>
-      <div className="bg-white px-5 pt-5 pb-5 rounded-lg">
-        <Image
-          alt=""
-          src={imageSrc}
-          height={300}
-          width={400}
-          className="w-full object-cover mb-5"
-        />
-        <h2 className="text-[1.5rem]">{title}</h2>
-      </div>
-    </Link>
-  );
+    return (
+        <Link href={`/works/${id}`} className={styles.cardLocate} style={style}>
+            <div className={styles.card}>
+                <Image
+                    alt=""
+                    src={imageSrc}
+                    height={300}
+                    width={400}
+                />
+                {/* <h2 className={styles.title}>{title}</h2> */}
+            </div>
+        </Link>
+    );
 }
