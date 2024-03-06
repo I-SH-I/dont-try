@@ -7,20 +7,22 @@ export default function Card({
     title,
     imageSrc,
     style,
+    rotate,
 }: {
     id: string;
     title: string;
     imageSrc: string;
     style?: React.CSSProperties;
+    rotate?: React.CSSProperties;
 }) {
     return (
         <Link href={`/works/${id}`} className={styles.cardLocate} style={style}>
-            <div className={styles.card}>
+            <div className={styles.card} style={rotate}>
                 <Image
                     alt=""
                     src={imageSrc}
-                    height={300}
-                    width={400}
+                    height={254}
+                    width={450}
                 />
                 {/* <h2 className={styles.title}>{title}</h2> */}
             </div>
