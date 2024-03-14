@@ -7,13 +7,17 @@ export default function Card({
     title,
     imageSrc,
     classNames,
+    onHover,
+    offHover,
 }: {
     id: string;
     title: string;
     imageSrc: string;
     classNames: Array<string>;
+    onHover: React.MouseEventHandler<HTMLAnchorElement>;
+    offHover: React.MouseEventHandler<HTMLAnchorElement>;
 }) {
     return (
-        <Link href={`/works/${id}`} className={`${styles.card} ${classNames ? classNames.map(name => styles[name]).join(' ') : ''}`} style={{ backgroundImage: `url(${imageSrc})` }}></Link>
+        <Link href={`/works/${id}`} onMouseEnter={onHover} onMouseLeave={offHover} className={`${styles.card} ${classNames ? classNames.map(name => styles[name]).join(' ') : ''}`} style={{ backgroundImage: `url(${imageSrc})` }}></Link>
     );
 }

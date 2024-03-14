@@ -5,7 +5,7 @@ import swagData from '../data';
 import Card from './components/Card/Card';
 import styles from './page.module.scss';
 
-export default function Works() {
+export default function Works({ setBackgroundImageUrl }) {
     const data = swagData;
     const containerRef = useRef(null);
     const [layoutPatterns, setLayoutPatterns] = useState<Array<Array<string>>>([]);
@@ -44,6 +44,8 @@ export default function Works() {
                         title={title}
                         imageSrc={imageSrc}
                         classNames={layoutPatterns[index]}
+                        onHover={() => setBackgroundImageUrl(imageSrc)}
+                        offHover={() => setBackgroundImageUrl('')}
                     />
                 ))}
             </div>
