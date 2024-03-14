@@ -6,26 +6,14 @@ export default function Card({
     id,
     title,
     imageSrc,
-    style,
-    rotate,
+    classNames,
 }: {
     id: string;
     title: string;
     imageSrc: string;
-    style?: React.CSSProperties;
-    rotate?: React.CSSProperties;
+    classNames: Array<string>;
 }) {
     return (
-        <Link href={`/works/${id}`} className={styles.cardLocate} style={style}>
-            <div className={styles.card} style={rotate}>
-                <Image
-                    alt=""
-                    src={imageSrc}
-                    height={254}
-                    width={450}
-                />
-                {/* <h2 className={styles.title}>{title}</h2> */}
-            </div>
-        </Link>
+        <Link href={`/works/${id}`} className={`${styles.card} ${classNames ? classNames.map(name => styles[name]).join(' ') : ''}`} style={{ backgroundImage: `url(${imageSrc})` }}></Link>
     );
 }
