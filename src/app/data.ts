@@ -113,6 +113,14 @@ const data: Work[] = [
   description: 'ここに説明が入ります',
   imageSrc: '/images/cards/g_record.png',
 },
+{
+  id: 'donttry',
+  title: 'DON\'T TRY',
+  language: ['HTML','CSS','JavaScript','TypeScript','React','Next.js'],
+  url: '/',
+  description: 'ここに説明が入ります',
+  imageSrc: '/images/cards/donttry.png',
+},
 ];
 
 export default data;

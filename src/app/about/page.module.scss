@@ -1,0 +1,47 @@
+@import '../mixins';
+
+.container {
+    position: relative;
+    width: 90vw;
+    height: 100vh;
+    margin: 0 0 0 auto;
+    transform: translateX(100%);
+    @include pc {
+        width: 100%;
+        max-width: 800px;
+    }
+    &:global(.slideIn) {
+        transform: translateX(0);
+        transition: transform .7s ease-in-out;
+    }
+}
+
+.profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    width: 100%;
+    padding: 30px 30px;
+    @include pc {
+        width: 80%;
+    }
+    dt {
+        font-weight: 700;
+        flex-shrink: 0;
+        text-align: right;
+    }
+    dd {
+        font-weight: 400;
+        margin-top: -.1px;
+        margin-left: 1em;
+    }
+}
+.profileRow {
+    display: flex;
+    align-items: text-top;
+    &+& {
+        margin-top: .8em;
+    }
+}
