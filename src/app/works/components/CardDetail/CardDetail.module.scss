@@ -1,7 +1,14 @@
+.image {
+    margin: 0 auto;
+}
 .title {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 400;
 }
 .language {
     color: #999;
+    margin-top: 8px;
+}
+.desc {
+    text-align: center;
 }

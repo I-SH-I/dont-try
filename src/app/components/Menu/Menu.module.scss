@@ -1,0 +1,42 @@
+@import '../../mixins';
+
+.area {
+    position: absolute;
+    width: 100vw;
+    height: 50vh;
+    @include pc {
+        width: 50vw;
+        height: 100vh;
+    }
+}
+.item {
+    position: absolute;
+    background: #888;
+    width: 50vh;
+    height: 50vh;
+    @include pc {
+        width: 33vh;
+        height: 33vh;
+    }
+}
+
+.item {
+    transition: .1s ease-in-out;
+}
+.area:hover .item {
+    width: 50vh;
+    height: 50vh;
+    transition: .2s ease-in-out;
+    @include pc {
+        width: 88vh;
+        height: 88vh;
+    }
+}
+.label {
+    position: absolute;
+    font-size: 24px;
+    color: #fff;
+    @include pc {
+        font-size: 32px;
+    }
+}

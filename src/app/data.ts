@@ -10,7 +10,7 @@ export type Work = {
 const data: Work[] = [
     {
         id: 'kiminovel',
-        title: 'ポプラキミノベル',
+        title: 'POPLAR KIMINOVEL',
         language: ['HTML','CSS','JavaScript','WordPress'],
         url: 'https://www.kiminovel.jp/',
         description:
@@ -35,7 +35,7 @@ const data: Work[] = [
     },
     {
         id: 'kitan',
-        title: 'キタンクラブ',
+        title: 'KITAN CLUB',
         language: ['HTML','CSS','JavaScript','WordPress'],
         url: 'https://kitan.jp/',
         description: 'ここに説明が入ります',
@@ -43,7 +43,7 @@ const data: Work[] = [
     },
     {
         id: 'toroneko',
-        title: '#とろねこチャレンジ',
+        title: '#TORONEKO CHALLENGE',
         language: ['Adobe Experienced Manager'],
         url: '',
         description: 'ここに説明が入ります',
@@ -75,7 +75,7 @@ const data: Work[] = [
     },
     {
       id: 'xpoint',
-      title: '株式会社クロスポイント・アドバイザーズ',
+      title: 'crosspoint advisers',
       language: ['HTML','CSS','JavaScript','WordPress'],
       url: 'https://xpoint.jp/',
       description: 'ここに説明が入ります',
