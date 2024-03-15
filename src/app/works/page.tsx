@@ -7,7 +7,7 @@ import styles from './page.module.scss';
 
 export default function Works({ setBackgroundImageUrl }) {
     const data = swagData;
-    const containerRef = useRef(null);
+    const containerRef = useRef<HTMLDivElement>(null);
     const [layoutPatterns, setLayoutPatterns] = useState<Array<Array<string>>>([]);
 
     useEffect(() => {
@@ -32,6 +32,9 @@ export default function Works({ setBackgroundImageUrl }) {
             });
         }
         setLayoutPatterns(cardLayouts);
+        if (containerRef.current) {
+            containerRef.current.classList.add('slideIn');
+        }
     }, [data]);
 
     return (

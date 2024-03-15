@@ -21,12 +21,12 @@
 }
 
 .item {
-    transition: .1s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .area:hover .item {
     width: 50vh;
     height: 50vh;
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
     @include pc {
         width: 88vh;
         height: 88vh;
@@ -36,7 +36,34 @@
     position: absolute;
     font-size: 24px;
     color: #fff;
+    transform: translate(0, 0);
     @include pc {
         font-size: 32px;
     }
+}
+.area:global(.slideIn) .item {
+    z-index: 99;
+    @include sp {
+        width: 400vw;
+        height: 600vh;
+        transition: width 0s, height 1s ease-in-out;
+    }
+    @include pc {
+        width: 600vw;
+        height: 600vw;
+        transition: 1s ease-in-out;
+    }
+}
+.area:global(.slideIn) .label {
+    /*
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    bottom: auto !important;
+    right: auto !important;
+    transform: translate(-50%, -50%);
+    transition: top 0s ease-in-out, left 0s ease-in-out,
+        bottom 0s ease-in-out, right 0s ease-in-out, transform 0s ease-in-out;
+    z-index: 100;
+    */
 }

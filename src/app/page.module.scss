@@ -4,8 +4,12 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #5588BB;
     overflow: hidden;
+    opacity: 0;
+    &:global(.isVisible) {
+        opacity: 1;
+        transition: .7s ease-in-out;
+    }
 }
 .title {
     font-size: 35px;
