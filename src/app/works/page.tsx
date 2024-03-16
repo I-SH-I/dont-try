@@ -6,7 +6,7 @@ import Card from './components/Card/Card';
 import styles from './page.module.scss';
 import BackToTop from '../components/BackToTop/BackToTop';
 
-export default function Works(props: { modal: React.ReactNode }) {
+export default function Works() {
     const data = swagData;
     const containerRef = useRef<HTMLDivElement>(null);
     const [layoutPatterns, setLayoutPatterns] = useState<Array<Array<string>>>(
