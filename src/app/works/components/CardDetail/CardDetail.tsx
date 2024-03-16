@@ -16,13 +16,15 @@ export default function CardDetail({ data }: { data: Work }) {
                     />
                 </a>
             ) : (
-                <Image
-                    alt=""
-                    src={data.imageSrc}
-                    height={600}
-                    width={800}
-                    className="col-span-2 mb-6 center"
-                />
+                <div className={styles.image}>
+                    <Image
+                        alt=""
+                        src={data.imageSrc}
+                        height={600}
+                        width={800}
+                        className="col-span-2 mb-6 center"
+                    />
+                </div>
             )}
             <div className={styles.text}>
                 {data.url ? (
@@ -33,9 +35,7 @@ export default function CardDetail({ data }: { data: Work }) {
                     <h2 className={styles.title}>{data.title}</h2>
                 )}
                 <p className={styles.language}>{data.language.join(' / ')}</p>
-                {data.charge && (
-                    <p className={styles.desc}>{data.charge}</p>
-                )} 
+                {data.charge && <p className={styles.desc}>{data.charge}</p>}
             </div>
         </div>
     );
