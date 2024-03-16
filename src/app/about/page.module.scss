@@ -6,6 +6,7 @@
     height: 100vh;
     margin: 0 0 0 auto;
     transform: translateX(100%);
+    background: #fff;
     @include pc {
         width: 100%;
         max-width: 800px;
@@ -23,9 +24,12 @@
     transform: translate(-50%, -50%);
     font-size: 30px;
     width: 100%;
-    padding: 30px 30px;
+    max-height: 100%;
+    overflow: scroll;
+    padding: 60px 30px;
     @include pc {
         width: 80%;
+        padding: 30px 20px 30px 30px;
     }
     dt {
         font-weight: 700;
@@ -35,13 +39,25 @@
     dd {
         font-weight: 400;
         margin-top: -.1px;
-        margin-left: 1em;
+        margin-left: .7em;
+        @include pc {
+            margin-left: 1em;            
+        }
     }
 }
 .profileRow {
     display: flex;
-    align-items: text-top;
+    align-items: flex-start;
     &+& {
         margin-top: .8em;
     }
+}
+
+.comment {
+    font-family: 'Honoka', 'sans-serif';
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 2em;
+    text-align: justify;
+    word-break: break-all;
 }

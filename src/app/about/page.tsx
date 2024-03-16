@@ -3,12 +3,18 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './page.module.scss';
 
-export default function About({ }) {
+export default function About({}) {
     const profile = [
-        {title: 'NAME', desc: 'Tokio Ishii'},
-        {title: 'BORN', desc: '1993.09'},
-        {title: 'SKILL', desc: 'HTML / CSS / JavaScript / TypeScript / React / Next.js / WordPress'},
-        {title: 'TOOL', desc: 'Photoshop / Adobe XD / Illustrator / VScode / Github'},
+        { title: 'NAME', desc: 'Tokio Ishii' },
+        { title: 'BORN', desc: '1993.09' },
+        {
+            title: 'SKILL',
+            desc: 'HTML(pug), CSS(SCSS), JavaScript, jQuery, TypeScript, React, Next.js, Vue.js, WordPress, PHP, Gulp, Node.js',
+        },
+        {
+            title: 'TOOL',
+            desc: 'Photoshop, Adobe XD, Illustrator, VScode, Github',
+        },
     ];
 
     const containerRef = useRef<HTMLDivElement>(null);
@@ -27,6 +33,10 @@ export default function About({ }) {
                             <dd>{desc}</dd>
                         </div>
                     ))}
+                    <div className={styles.comment}>
+                        <p>2018年、独学でHTML/CSS/JavaScriptを学びながらアルバイトとしてウェブ制作を開始。2019年より吉祥寺の制作会社にてコーディング業務を担当。</p>
+                        <p>UI/UX系の実装経験が豊富。</p>
+                    </div>
                 </dl>
             </div>
         </>

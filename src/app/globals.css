@@ -16,6 +16,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Honoka';
+    src: url('/fonts/Honoka-Shin-Antique-Kaku_M.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
@@ -31,6 +38,6 @@
 }
 
 body {
-    font-family: 'Jockey', 'sans-serif';
+    font-family: 'Jockey', 'Honoka', 'sans-serif';
     background: #5588bb;
 }
