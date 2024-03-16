@@ -51,6 +51,7 @@ const data: Work[] = [
             'TypeScript',
             'React',
             'Next.js',
+            'Vercel'
         ],
         url: '/',
         charge: '実装・更新・デザイン',
