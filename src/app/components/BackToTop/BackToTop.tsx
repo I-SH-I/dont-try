@@ -15,7 +15,7 @@ export default function MenuItem({
         [position]: 0,
     };
     const router = useRouter();
-    const animation = (event) => {
+    const animation = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         event.preventDefault();
         if (areaRef.current) {
             areaRef.current.classList.add('slideOut');

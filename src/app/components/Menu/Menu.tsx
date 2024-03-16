@@ -30,7 +30,7 @@ export default function MenuItem({
         transform: `translate(${position[2]}, ${position[3]}) rotate(45deg)`,
     };
     const router = useRouter();
-    const animation = (event) => {
+    const animation = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         event.preventDefault();
         if (linkRef.current) {
             linkRef.current.classList.add('slideIn');
