@@ -1,17 +1,14 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './Card.module.scss';
 
 export default function Card({
     id,
-    title,
     imageSrc,
     classNames,
     onHover,
     offHover,
 }: {
     id: string;
-    title: string;
     imageSrc: string;
     classNames: Array<string>;
     onHover: React.MouseEventHandler<HTMLAnchorElement>;

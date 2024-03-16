@@ -1,14 +1,18 @@
 'use client';
 
-import React, { useState, useEffect, useRef, Dispatch, SetStateAction } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import swagData from '../data';
 import Card from './components/Card/Card';
 import styles from './page.module.scss';
+import BackToTop from '../components/BackToTop/BackToTop';
 
-export default function Works({ setBackgroundImageUrl }: { setBackgroundImageUrl: Dispatch<SetStateAction<string>> } ) {
+export default function Works(props: { modal: React.ReactNode }) {
     const data = swagData;
     const containerRef = useRef<HTMLDivElement>(null);
-    const [layoutPatterns, setLayoutPatterns] = useState<Array<Array<string>>>([]);
+    const [layoutPatterns, setLayoutPatterns] = useState<Array<Array<string>>>(
+        []
+    );
+    const [backgroundImageUrl, setBackgroundImageUrl] = useState<string>('');
 
     useEffect(() => {
         const patterns = [
@@ -25,7 +29,10 @@ export default function Works({ setBackgroundImageUrl }: { setBackgroundImageUrl
             let rowItemCount = 1;
             Array.from({ length: columns }).forEach(() => {
                 if (i < data.length) {
-                    cardLayouts.push(['col-'+columns, name+'-'+rowItemCount]);
+                    cardLayouts.push([
+                        'col-' + columns,
+                        name + '-' + rowItemCount,
+                    ]);
                     i++;
                     rowItemCount++;
                 }
@@ -39,12 +46,15 @@ export default function Works({ setBackgroundImageUrl }: { setBackgroundImageUrl
 
     return (
         <>
+            <div
+                className={styles.bg}
+                style={{ backgroundImage: `url(${backgroundImageUrl})` }}
+            ></div>
             <div ref={containerRef} className={styles.container}>
-                {data.map(({ id, title, imageSrc }, index) => (
+                {data.map(({ id, imageSrc }, index) => (
                     <Card
                         key={id}
                         id={id}
-                        title={title}
                         imageSrc={imageSrc}
                         classNames={layoutPatterns[index]}
                         onHover={() => setBackgroundImageUrl(imageSrc)}
@@ -52,6 +62,7 @@ export default function Works({ setBackgroundImageUrl }: { setBackgroundImageUrl
                     />
                 ))}
             </div>
+            <BackToTop position={'right'}></BackToTop>
         </>
     );
 }
