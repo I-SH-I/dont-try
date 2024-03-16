@@ -5,7 +5,7 @@ import swagData from '../data';
 import Card from './components/Card/Card';
 import styles from './page.module.scss';
 
-export default function Works({ setBackgroundImageUrl }: { setBackgroundImageUrl: Dispatch<SetStateAction<string>> } ) {
+export default function Works({ setBackgroundImageUrl }: { setBackgroundImageUrl: any } ) {
     const data = swagData;
     const containerRef = useRef<HTMLDivElement>(null);
     const [layoutPatterns, setLayoutPatterns] = useState<Array<Array<string>>>([]);

@@ -6,7 +6,6 @@ import styles from './layout.module.scss';
 import BackToTop from '../components/BackToTop/BackToTop';
 
 export default function WorksLayout(props: {
-    children: React.ReactNode;
     modal: React.ReactNode;
 }) {
     const [backgroundImageUrl, setBackgroundImageUrl] = useState<string>('');
