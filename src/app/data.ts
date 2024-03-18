@@ -9,6 +9,15 @@ export type Work = {
 
 const data: Work[] = [
     {
+        id: 'ado',
+        title: 'Niconico × Ado',
+        language: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
+        url: 'https://site.nicovideo.jp/niconico_ado/',
+        charge:
+            '実装',
+        imageSrc: '/images/cards/ado.png',
+    },
+    {
         id: 'kiminovel',
         title: 'POPLAR KIMINOVEL',
         language: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'WordPress'],
