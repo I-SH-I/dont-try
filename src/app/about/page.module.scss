@@ -13,7 +13,7 @@
     }
     &:global(.slideIn) {
         transform: translateX(0);
-        transition: transform .7s ease-in-out;
+        transition: transform 0.7s ease-in-out;
     }
 }
 
@@ -27,6 +27,11 @@
     max-height: 100%;
     overflow: scroll;
     padding: 60px 30px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
     @include pc {
         width: 80%;
         padding: 30px 20px 30px 30px;
@@ -38,18 +43,18 @@
     }
     dd {
         font-weight: 400;
-        margin-top: -.1px;
-        margin-left: .7em;
+        margin-top: -0.1px;
+        margin-left: 0.7em;
         @include pc {
-            margin-left: 1em;            
+            margin-left: 1em;
         }
     }
 }
 .profileRow {
     display: flex;
     align-items: flex-start;
-    &+& {
-        margin-top: .8em;
+    & + & {
+        margin-top: 0.8em;
     }
 }
 
