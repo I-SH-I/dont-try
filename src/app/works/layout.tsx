@@ -1,16 +1,17 @@
 'use client';
 
-import React from 'react';
+import React, { use } from 'react';
 import styles from './layout.module.scss';
 
 export default function WorksLayout(props: {
     children: React.ReactNode;
     modal: React.ReactNode;
 }) {
+    const children = use(props.children);
     return (
         <main className={styles.worksArea}>
-            {props.children}
-            {props.modal}
+            {children}
+            {modal}
         </main>
     );
 }
