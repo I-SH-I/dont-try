@@ -55,7 +55,7 @@ export default function Works() {
                     <Card
                         key={id}
                         id={id}
-                        imageSrc={imageSrc}
+                        imageSrc={`images/cards/${imageSrc}`}
                         classNames={layoutPatterns[index]}
                         onHover={() => setBackgroundImageUrl(imageSrc)}
                         offHover={() => setBackgroundImageUrl('')}

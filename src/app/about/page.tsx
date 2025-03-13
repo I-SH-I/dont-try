@@ -9,7 +9,7 @@ export default function About({}) {
         { title: 'BORN', desc: '1993.09' },
         {
             title: 'SKILL',
-            desc: 'HTML(pug), CSS(SCSS), JavaScript, jQuery, TypeScript, React, Next.js, Vue.js, WordPress, PHP, Gulp, Node.js, Vercel',
+            desc: 'HTML(pug), CSS(SCSS), JavaScript, jQuery, TypeScript, React, Next.js, Vue.js, Python, WordPress, PHP, Gulp, Node.js, Vercel',
         },
         {
             title: 'TOOL',

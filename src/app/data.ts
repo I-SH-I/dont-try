@@ -5,26 +5,43 @@ export type Work = {
     url: string;
     charge: string;
     imageSrc: string;
+    productImages: Array<string>;
 };
 
 const data: Work[] = [
+    {
+        id: 'quiz',
+        title: 'Alas!',
+        language: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'TypeScript',
+            'React',
+            'Next.js',
+        ],
+        url: '',
+        charge: '企画・デザイン・実装',
+        imageSrc: 'quiz.png',
+        productImages: ['alas_1.png', 'alas_2.png', 'alas_3.png'],
+    },
     {
         id: 'ado',
         title: 'Niconico × Ado',
         language: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
         url: 'https://site.nicovideo.jp/niconico_ado/',
-        charge:
-            '実装',
-        imageSrc: '/images/cards/ado.png',
+        charge: '実装',
+        imageSrc: 'ado.png',
+        productImages: [],
     },
     {
         id: 'kiminovel',
         title: 'POPLAR KIMINOVEL',
         language: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'WordPress'],
         url: 'https://www.kiminovel.jp/',
-        charge:
-            '実装・CMS導入・改修・機能追加・運用保守',
-        imageSrc: '/images/cards/kiminovel.png',
+        charge: '実装・CMS導入・改修・機能追加・運用保守',
+        imageSrc: 'kiminovel.png',
+        productImages: [],
     },
     {
         id: 'eli',
@@ -32,7 +49,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript'],
         url: 'https://eli-salestech.com/',
         charge: '改修・機能追加',
-        imageSrc: '/images/cards/eli.png',
+        imageSrc: 'eli.png',
+        productImages: [],
     },
     {
         id: 'kurukura',
@@ -40,7 +58,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
         url: 'https://kurukura.jp/',
         charge: '実装',
-        imageSrc: '/images/cards/kurukura.png',
+        imageSrc: 'kurukura.png',
+        productImages: [],
     },
     {
         id: 'kitan',
@@ -48,7 +67,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'WordPress'],
         url: 'https://kitan.jp/',
         charge: '実装・CMS導入・改修・機能追加',
-        imageSrc: '/images/cards/kitan.jpg',
+        imageSrc: 'kitan.jpg',
+        productImages: [],
     },
     {
         id: 'donttry',
@@ -60,11 +80,12 @@ const data: Work[] = [
             'TypeScript',
             'React',
             'Next.js',
-            'Vercel'
+            'Vercel',
         ],
         url: '/',
         charge: '実装・更新・デザイン',
-        imageSrc: '/images/cards/donttry.png',
+        imageSrc: 'donttry.png',
+        productImages: [],
     },
     {
         id: 'toroneko',
@@ -72,7 +93,8 @@ const data: Work[] = [
         language: ['Adobe Experienced Manager'],
         url: '',
         charge: '実装',
-        imageSrc: '/images/cards/toroneko.webp',
+        imageSrc: 'toroneko.webp',
+        productImages: [],
     },
     {
         id: 'mado',
@@ -80,7 +102,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'WordPress'],
         url: 'https://mado.cinra.net/',
         charge: '実装・CMS導入',
-        imageSrc: '/images/cards/mado.png',
+        imageSrc: 'mado.png',
+        productImages: [],
     },
     {
         id: 'big',
@@ -88,7 +111,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'MovableType'],
         url: 'https://www.bridgestone.co.jp/corporate/innovation_gallery/',
         charge: '実装・CMS導入',
-        imageSrc: '/images/cards/big.png',
+        imageSrc: 'big.png',
+        productImages: [],
     },
     {
         id: 'hare',
@@ -96,7 +120,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'jQuery', 'JavaScript'],
         url: 'https://hare.jp/',
         charge: '実装・CMS導入・改修',
-        imageSrc: '/images/cards/hare.jpg',
+        imageSrc: 'hare.jpg',
+        productImages: [],
     },
     {
         id: 'lyrical',
@@ -104,7 +129,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'jQuery', 'JavaScript'],
         url: 'https://lyricalschool.com/',
         charge: '実装・CMS導入・改修・運用保守',
-        imageSrc: '/images/cards/lyrical.png',
+        imageSrc: 'lyrical.png',
+        productImages: [],
     },
     {
         id: 'xpoint',
@@ -112,7 +138,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'WordPress'],
         url: 'https://xpoint.jp/',
         charge: '実装・CMS導入',
-        imageSrc: '/images/cards/xpoint.png',
+        imageSrc: 'xpoint.png',
+        productImages: [],
     },
     {
         id: 'shiseido',
@@ -120,7 +147,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
         url: 'https://www.shiseidocreative.com/',
         charge: '実装・CMS導入',
-        imageSrc: '/images/cards/shiseido.png',
+        imageSrc: 'shiseido.png',
+        productImages: [],
     },
     {
         id: 'diane',
@@ -128,7 +156,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
         url: 'https://www.diane-bonheur.com/',
         charge: '改修・機能追加',
-        imageSrc: '/images/cards/diane.png',
+        imageSrc: 'diane.png',
+        productImages: [],
     },
     {
         id: 'yamakara',
@@ -136,7 +165,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
         url: 'https://www.yamakara.com/top/courses',
         charge: '実装',
-        imageSrc: '/images/cards/yamakara.webp',
+        imageSrc: 'yamakara.webp',
+        productImages: [],
     },
     {
         id: 'g_record',
@@ -144,7 +174,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
         url: 'http://goldenrecord.cs8.biz/',
         charge: '実装',
-        imageSrc: '/images/cards/g_record.png',
+        imageSrc: 'g_record.png',
+        productImages: [],
     },
     {
         id: 'imaginary',
@@ -152,7 +183,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript'],
         url: 'http://imaginary-line.cs8.biz/',
         charge: '実装',
-        imageSrc: '/images/cards/imaginary.png',
+        imageSrc: 'imaginary.png',
+        productImages: [],
     },
     {
         id: 'bordering',
@@ -160,7 +192,8 @@ const data: Work[] = [
         language: ['HTML', 'CSS', 'JavaScript'],
         url: 'http://bordering-practice.cs8.biz/',
         charge: '実装',
-        imageSrc: '/images/cards/bordering.png',
+        imageSrc: 'bordering.png',
+        productImages: [],
     },
 ];
 

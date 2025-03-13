@@ -9,7 +9,7 @@ export default function CardDetail({ data }: { data: Work }) {
                 <a className={styles.image} href={data.url} target="_blank">
                     <Image
                         alt=""
-                        src={data.imageSrc}
+                        src={`/images/cards/${data.imageSrc}`}
                         height={600}
                         width={800}
                         className="col-span-2 mb-6 center"
@@ -19,7 +19,7 @@ export default function CardDetail({ data }: { data: Work }) {
                 <div className={styles.image}>
                     <Image
                         alt=""
-                        src={data.imageSrc}
+                        src={`/images/cards/${data.imageSrc}`}
                         height={600}
                         width={800}
                         className="col-span-2 mb-6 center"
